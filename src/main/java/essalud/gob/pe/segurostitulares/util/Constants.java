@@ -40,4 +40,6 @@ public class Constants {
 
     public static final Integer codCondicionPersona=102;
     public static final String codTablaCondicionPersona="01";
+
+    public static final Integer codTipoDocumento=101;
 }

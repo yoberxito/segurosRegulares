@@ -136,5 +136,20 @@ public class ServiceDataCdgmdetallimpl extends Constants implements ServiceDataC
 
     }
 
+    @Override
+    public Object getTipoDocumentos() throws SQLException {
+        SqlParameter[] sqlParameters = new SqlParameter[]{
+                new SqlParameter("PIV_IDE_NUMERICO_TABLA", OracleTypes.VARCHAR),
+                new SqlOutParameter("POV_FLAG_RESULTADO",OracleTypes.VARCHAR),
+                new SqlOutParameter("POV_MENSAJE",OracleTypes.VARCHAR),
+                new SqlOutParameter("CURSOR_DATA",OracleTypes.CURSOR)
+        };
+        Map<String, Object> params = new HashMap<>();
+        params.put("PIV_IDE_NUMERICO_TABLA",codTipoDocumento);
+
+        return cdgmdetallComponent.getInfoCompendio("PRC_LISTAR_TIPO_DOCUMENTO", "PKG_MIA_TITULARES", sqlParameters, params,"POV_FLAG_RESULTADO","POV_MENSAJE","CURSOR_DATA");
+
+    }
+
 
 }

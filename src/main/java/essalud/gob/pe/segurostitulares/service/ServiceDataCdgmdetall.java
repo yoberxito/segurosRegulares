@@ -1,6 +1,6 @@
 package essalud.gob.pe.segurostitulares.service;
 
-import essalud.gob.pe.segurostitulares.util.Constants;
+
 
 import java.sql.SQLException;
 
@@ -16,4 +16,6 @@ public interface ServiceDataCdgmdetall {
     Object getSubModalidadCovertura() throws SQLException;
     Object getTipoOperacion() throws SQLException;
     Object getCondicionPersona() throws SQLException;
+
+    Object getTipoDocumentos() throws SQLException;
 }

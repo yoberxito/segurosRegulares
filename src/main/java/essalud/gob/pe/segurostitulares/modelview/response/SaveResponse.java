@@ -3,6 +3,7 @@ package essalud.gob.pe.segurostitulares.modelview.response;
 import lombok.Data;
 
 @Data
-public class DataResponse extends InscripcionResponse{
-    private Object data;
+public class SaveResponse extends InscripcionResponse{
+    private Object object;
+
 }

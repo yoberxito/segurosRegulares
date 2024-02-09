@@ -74,4 +74,12 @@ public class InformacionEssaludController {
 
         return ResponseEntity.ok(tipoOperacion);
     }
+
+    @GetMapping("/getTiposDocumentos")
+    public ResponseEntity<?> getTiposDocumentos() throws SQLException {
+
+        Object tiposDosumentos=dataCdgmdetall.getTipoDocumentos();
+
+        return ResponseEntity.ok(tiposDosumentos);
+    }
 }
