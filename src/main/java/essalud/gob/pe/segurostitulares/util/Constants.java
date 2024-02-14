@@ -41,5 +41,12 @@ public class Constants {
     public static final Integer codCondicionPersona=102;
     public static final String codTablaCondicionPersona="01";
 
+<<<<<<< HEAD
     public static final Integer codTipoDocumento=101;
+=======
+    public static final String USRCSA = "USRCSA";
+    public static final String CODRESULTADO = "CODRESULTADO";
+    public static final String MSGRESULTADO = "MSGRESULTADO";
+    public static final String CODRESULTADO_EXITO = "1";
+>>>>>>> 73db3a86bc2b8d125437f2ff9d1d7a9da0b03988
 }
