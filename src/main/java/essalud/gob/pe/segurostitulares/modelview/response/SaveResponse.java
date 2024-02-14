@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class SaveResponse extends InscripcionResponse{
-    private Object object;
+    private String idNumericoInscripcion;
 
 }

@@ -1,10 +1,7 @@
 package essalud.gob.pe.segurostitulares.service.impl;
 
 import essalud.gob.pe.segurostitulares.component.InsertAllComponent;
-import essalud.gob.pe.segurostitulares.modelview.request.CsamdireccRequest;
-import essalud.gob.pe.segurostitulares.modelview.request.CsatadscriRequest;
-import essalud.gob.pe.segurostitulares.modelview.request.CsatinscriRequest;
-import essalud.gob.pe.segurostitulares.modelview.request.CscmapersonRequest;
+import essalud.gob.pe.segurostitulares.modelview.request.*;
 import essalud.gob.pe.segurostitulares.modelview.response.*;
 import essalud.gob.pe.segurostitulares.service.ServiceInscripcion;
 import lombok.AllArgsConstructor;
@@ -81,7 +78,7 @@ public class ServiceIncripcionImpl implements ServiceInscripcion {
     }
 
     @Override
-    public CsatinscriResponse insertCsatinscri(CsatinscriRequest request) throws SQLException {
+    public CsatinscriResponse insertCsatinscri(CsatinscriRequest request,String idNumericoPersona) throws SQLException {
         SqlParameter[] sqlParameters = new SqlParameter[]{
                 new SqlParameter("PIV_IDE_NUMERICO_PERSONA", OracleTypes.VARCHAR),
                 new SqlParameter("PIV_IDE_NUMERICO_ENTIDAD", OracleTypes.VARCHAR),
@@ -108,7 +105,7 @@ public class ServiceIncripcionImpl implements ServiceInscripcion {
         };
         Map<String, Object> params = new HashMap<>();
 
-        params.put("PIV_IDE_NUMERICO_PERSONA", request);
+        params.put("PIV_IDE_NUMERICO_PERSONA", idNumericoPersona);
         params.put("PIV_IDE_NUMERICO_ENTIDAD", request);
         params.put("PIV_EMODALID_COBERTUR", request);
         params.put("PIV_ECLASIFIC_COBERTUR", request);
@@ -133,7 +130,7 @@ public class ServiceIncripcionImpl implements ServiceInscripcion {
     }
 
     @Override
-    public CsatadscriResponse  insertCsatadscri(CsatadscriRequest request) throws SQLException {
+    public CsatadscriResponse  insertCsatadscri(CsatadscriRequest request,String idNumericoPersona) throws SQLException {
         SqlParameter[] sqlParameters = new SqlParameter[]{
                 new SqlParameter("PIV_IDE_NUMERICO_PERSONA", OracleTypes.VARCHAR),
                 new SqlParameter("PIV_COD_ETIPO_ADSCRIPC", OracleTypes.VARCHAR),
@@ -187,7 +184,7 @@ public class ServiceIncripcionImpl implements ServiceInscripcion {
     }
 
     @Override
-    public CsardirperResponse insrtCsardirper(CsamdireccRequest request) throws SQLException {
+    public CsardirperResponse insrtCsardirper(CsardirperRequest request,String idNumericoDirecc) throws SQLException {
         SqlParameter[] sqlParameters = new SqlParameter[]{
                 new SqlParameter("PIV_IDE_NUMERICO_DIRECCIO", OracleTypes.VARCHAR),
                 new SqlParameter("PIV_IDE_NUMERICO_PERSONA", OracleTypes.VARCHAR),
@@ -205,7 +202,7 @@ public class ServiceIncripcionImpl implements ServiceInscripcion {
         };
         Map<String, Object> params = new HashMap<>();
 
-        params.put("PIV_IDE_NUMERICO_DIRECCIO", request);
+        params.put("PIV_IDE_NUMERICO_DIRECCIO", idNumericoDirecc);
         params.put("PIV_IDE_NUMERICO_PERSONA", request);
         params.put("PIV_COD_ETIPO_PERMANEN", request);
         params.put("PIV_COD_ECONDPOSE_BIEN", request);

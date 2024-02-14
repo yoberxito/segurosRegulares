@@ -36,7 +36,7 @@ public class InsertAllComponent {
             log.info("get" + out.get(outParam2));
             log.info("get" + out.get(outParam3));
             CscmapersonResponse  dataResponse = new CscmapersonResponse();
-            dataResponse.setIdNumericoPersona((Long) out.get(outParam3));
+            dataResponse.setIdNumericoPersona((String) out.get(outParam3));
             dataResponse.setFlagResultado((String) out.get(outParam1));
             dataResponse.setMensaje((String) out.get(outParam2));
             return dataResponse;
@@ -99,7 +99,7 @@ public class InsertAllComponent {
             log.info("get" + out.get(outParam2));
             log.info("get" + out.get(outParam3));
             CsatinscriResponse  dataResponse = new CsatinscriResponse();
-            dataResponse.setIdNumericoPersona((Long) out.get(outParam3));
+            dataResponse.setIdNumericoInscripcion(String.valueOf(out.get(outParam3)));
             dataResponse.setFlagResultado((String) out.get(outParam1));
             dataResponse.setMensaje((String) out.get(outParam2));
             return dataResponse;
@@ -225,7 +225,7 @@ public class InsertAllComponent {
             log.info("get" + out.get(outParam2));
             log.info("get" + out.get(outParam3));
             CsamdireccResponse dataResponse = new CsamdireccResponse();
-            dataResponse.setIdNumericoCsamdirecc((Long) out.get(outParam3));
+            dataResponse.setIdNumericoCsamdirecc((String) out.get(outParam3));
             dataResponse.setFlagResultado((String) out.get(outParam1));
             dataResponse.setMensaje((String) out.get(outParam2));
             return dataResponse;

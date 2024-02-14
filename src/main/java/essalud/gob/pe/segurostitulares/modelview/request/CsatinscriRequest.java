@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class CsatinscriRequest {
 
-    private String idNumericoInscripcion;
+    //private String idNumericoPersona;
     private String idNumericoEntidad;
     private String modalidadCobertura;
     private String subModalidadCobertura;

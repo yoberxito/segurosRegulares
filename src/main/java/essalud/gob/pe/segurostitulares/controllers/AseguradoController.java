@@ -18,7 +18,7 @@ import java.sql.SQLException;
 public class AseguradoController {
     private final ServiceReniec serviceReniec;
 
-    @GetMapping("/data/{numeroDocumento}")
+    @GetMapping("/dataReniec/{numeroDocumento}")
     public ResponseEntity<?> getInfoReniec(@PathVariable String numeroDocumento) throws SQLException {
 
         Object persona=serviceReniec.getDataReniec(numeroDocumento);

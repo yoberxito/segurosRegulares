@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class CsatinscriResponse extends InscripcionResponse{
 
-    private Long idNumericoPersona;
+    private String idNumericoInscripcion;
 
 }
